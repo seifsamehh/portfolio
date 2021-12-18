@@ -1,0 +1,123 @@
+@import "_global";
+body {
+  background-image: url(/project/blob.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+// start about me
+.about-me {
+  padding-bottom: 60px;
+  transform: translate(0%, 50%);
+  .about {
+    position: relative;
+    &::before {
+      content: "ABOUT";
+      position: absolute;
+      top: -30%;
+      left: -25%;
+      color: $before-color;
+      font-size: 10em;
+      font-weight: 800;
+      z-index: -1;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 4em;
+        top: -13%;
+        left: -5%;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        left: -5%;
+      }
+    }
+    .first,
+    .second {
+      font-family: "La Belle Aurore", cursive;
+      color: rgb(168, 168, 168);
+      font-size: 1.3em;
+    }
+    h1 {
+      color: $main-color;
+      font-size: 2.8em;
+      font-weight: 600;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 2em;
+      }
+      #avatar {
+        svg {
+          width: 13% !important;
+          @media (min-width: $xx-small) and (max-width: $x-small) {
+            width: 20% !important;
+          }
+          @media (min-width: 422px) and (max-width: 576px) {
+            width: 15% !important;
+          }
+          @media (min-width: 769px) and (max-width: $lg) {
+            width: 10% !important;
+          }
+        }
+      }
+    }
+    .stretch-it {
+      .char {
+        transition: transform 0.5s cubic-bezier(0.8, 0, 0, 0.9);
+        //transition-delay: calc( 0.03s * var(--char-index) );
+      }
+      &:hover .char {
+        transform: scale(0.8, 0.8);
+      }
+      .char:hover {
+        transform: scale(0.9, 1.5);
+        transition-duration: 0.3s;
+      }
+    }
+    p {
+      color: $sec-color;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 1em;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 1em;
+      }
+      #heart {
+        svg {
+          width: 10% !important;
+          @media (min-width: $xx-small) and (max-width: $x-small) {
+            width: 18% !important;
+          }
+          @media (min-width: 422px) and (max-width: 576px) {
+            width: 14% !important;
+          }
+        }
+      }
+    }
+  }
+  .img {
+    @extend .flex;
+    .photo {
+      @extend .flex;
+      background-color: rgba(231, 76, 60, 0.7);
+      border-radius: 5px;
+      width: 50%;
+      transform-style: preserve-3d;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 90%;
+      }
+      img {
+        width: 55%;
+        height: 55vh;
+        object-fit: contain;
+        transform: translateZ(60px);
+        @media (min-width: $xx-small) and (max-width: $x-small) {
+          object-fit: cover;
+          transform: translateZ(20px);
+        }
+        @media (min-width: 422px) and (max-width: 576px) {
+          object-fit: contain;
+          transform: translateZ(20px);
+        }
+      }
+    }
+  }
+}
+// end about me

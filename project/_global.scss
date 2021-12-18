@@ -1,0 +1,72 @@
+// start main variables
+$bg-color: #2c3e50;
+$main-color: #e74c3c;
+$sec-color: #fff;
+$before-color: #89898983;
+$xx-small: 280px;
+$x-small: 576px;
+$sm: 577px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$color-bright: #f2f1c6;
+$color-orange: #ff6138;
+$html-color: #dd512a;
+$css-color: #2196f3;
+$js-color: #e4ba42;
+$jq-color: #0868ac;
+$bs-color: #5e3b7f;
+$sass-color: #cd6699;
+$ajax-color: #2c3e50;
+$json-color: #ffe100;
+$gulp-color: #d44945;
+$npm-color: #cc3534;
+$git-color: #f15233;
+$github-color: #000;
+// end main variables
+// start global components
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $bg-color;
+  color: $sec-color;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  user-select: none;
+  //   font-family: "La Belle Aurore", cursive;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: $bg-color;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $main-color;
+  border-radius: 10px;
+}
+.typed-cursor {
+  color: $main-color;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $bg-color;
+  @extend .flex;
+  z-index: 100;
+}
+// end global components

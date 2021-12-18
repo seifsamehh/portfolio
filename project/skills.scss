@@ -1,0 +1,566 @@
+@import "_global";
+// start skills
+.skills {
+  padding: 60px 0;
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 6em;
+    color: $sec-color;
+    letter-spacing: 2px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: -1;
+    @media (min-width: $xx-small) and (max-width: $x-small) {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    @media (min-width: $sm) and (max-width: $md) {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 769px) and (max-width: $lg) {
+      font-size: 5em;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 993px) and (max-width: $xl) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 1201px) and (max-width: 1340px) {
+      margin-bottom: 20px;
+    }
+  }
+  .html,
+  .css,
+  .javascript,
+  .jquery,
+  .bootstrap,
+  .sass,
+  .ajax,
+  .json,
+  .gulp,
+  .npm,
+  .git,
+  .github {
+    @extend .flex;
+    margin-bottom: 20px;
+    background-color: $sec-color;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 20%;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        width: 20%;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        width: 15%;
+      }
+    }
+    .square,
+    .circle {
+      transform-style: preserve-3d;
+      @extend .flex;
+      p {
+        font-weight: 600;
+        color: $sec-color;
+        font-size: 1.3em;
+        transform: translateZ(60px);
+        @media (min-width: $xx-small) and (max-width: $x-small) {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  .html {
+    &::before {
+      content: "HTML";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      color: $html-color;
+      font-size: 8em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 3em;
+        top: 40px;
+        left: -5px;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 5em;
+        top: 60px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 6em;
+        top: 40px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        font-size: 6em;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: 0;
+      }
+    }
+    .square {
+      width: 70px;
+      height: 70px;
+      background-color: $html-color;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .javascript {
+    &::before {
+      content: "JAVASCRIPT";
+      position: absolute;
+      top: 60px;
+      left: 0;
+      color: $js-color;
+      font-size: 6em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 2em;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 3em;
+        top: 100px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 4em;
+        top: 80px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        font-size: 5em;
+        top: 40px;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: 40px;
+      }
+    }
+    .square {
+      width: 70px;
+      height: 70px;
+      background-color: $js-color;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .css {
+    &::before {
+      content: "CSS";
+      position: absolute;
+      top: 25px;
+      right: 0;
+      color: $css-color;
+      font-size: 8em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 4em;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 5em;
+        top: 60px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 6em;
+        top: 40px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        top: 0;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: 0;
+      }
+    }
+    .circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $css-color;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .jquery {
+    &::before {
+      content: "JQUERY";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      color: $jq-color;
+      font-size: 8em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 2em;
+        top: 55px;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 4em;
+        top: 70px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 5em;
+        top: 50px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        font-size: 6em;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: 0;
+      }
+    }
+    .circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $jq-color;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .bootstrap {
+    &::before {
+      content: "BOOTSTRAP";
+      position: absolute;
+      top: 60px;
+      right: 0;
+      color: $bs-color;
+      font-size: 6em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 2em;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 2.5em;
+        top: 110px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 3.5em;
+        top: 85px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        font-size: 4em;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        font-size: 5em;
+      }
+    }
+    .square {
+      width: 70px;
+      height: 70px;
+      background-color: $bs-color;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .sass {
+    &::before {
+      content: "SASS";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      color: $sass-color;
+      font-size: 8em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 3em;
+        top: 45px;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 4em;
+        top: 75px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 6em;
+        top: 40px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        top: 0;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: 0;
+      }
+    }
+    .circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $sass-color;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .ajax {
+    &::before {
+      content: "AJAX";
+      position: absolute;
+      top: 40px;
+      right: 0;
+      color: $ajax-color;
+      font-size: 6em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 3em;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        top: 10px;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: 30px;
+      }
+    }
+    .square {
+      width: 70px;
+      height: 70px;
+      background-color: $ajax-color;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .json {
+    &::before {
+      content: "JSON";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      color: $json-color;
+      font-size: 8em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 3em;
+        top: 40px;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 4em;
+        top: 70px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 5em;
+        top: 50px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        top: -20px;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: -10px;
+      }
+    }
+    .circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $json-color;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .gulp {
+    &::before {
+      content: "GULP";
+      position: absolute;
+      top: 30px;
+      right: 0;
+      color: $gulp-color;
+      font-size: 8em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 3em;
+        top: 40px;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 4em;
+        top: 75px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 5em;
+        top: 60px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        top: 0;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: 0;
+      }
+    }
+    .square {
+      width: 70px;
+      height: 70px;
+      background-color: $gulp-color;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .npm {
+    &::before {
+      content: "NPM";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      color: $npm-color;
+      font-size: 8em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 3em;
+        top: 30px;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 4em;
+        top: 60px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 5em;
+        top: 40px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        top: -20px;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: -10px;
+      }
+    }
+    .circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $npm-color;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .git {
+    &::before {
+      content: "GIT";
+      position: absolute;
+      top: 30px;
+      right: 0;
+      color: $git-color;
+      font-size: 8em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 3em;
+        top: 40px;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 4em;
+        top: 70px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        top: 20px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        top: 0;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: 0;
+      }
+    }
+    .square {
+      width: 70px;
+      height: 70px;
+      background-color: $git-color;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .github {
+    &::before {
+      content: "GITHUB";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      color: $github-color;
+      font-size: 8em;
+      font-weight: 700;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 2em;
+        top: 60px;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 4em;
+        top: 80px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 5em;
+        top: 60px;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        font-size: 6em;
+      }
+      @media (min-width: 1201px) and (max-width: 1340px) {
+        top: 0;
+      }
+    }
+    .circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $github-color;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+// end skills

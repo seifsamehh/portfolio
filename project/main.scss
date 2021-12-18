@@ -1,0 +1,845 @@
+@import "_global";
+// start header
+header {
+  padding: 20px 0;
+  background-image: url(/project/glitch-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .logo {
+    .lt-1 {
+      font-size: 3.4em;
+      color: $main-color;
+      font-weight: 600;
+      filter: drop-shadow(-5px 3px 0 $sec-color);
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 3em;
+      }
+    }
+  }
+  .menu-bar {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $main-color;
+    margin: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    @media (min-width: $xx-small) and (max-width: $x-small) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .menu-bar .line {
+    width: 25px;
+    height: 2px;
+    margin: 3px;
+    background: #ebebeb;
+    transition: all 300ms ease-out;
+  }
+  .nav-bar .nav-items {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $main-color;
+    clip-path: circle(30px at 93% 8%);
+    transition: all 800ms ease-out;
+    opacity: 0;
+    z-index: 1;
+  }
+  .nav-bar .nav-items .nav-links {
+    color: $sec-color;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin: 16px 0;
+    text-decoration: none;
+  }
+  .nav-bar.toggle .nav-items {
+    clip-path: circle(100%);
+    opacity: 1;
+  }
+  .nav-bar.toggle .menu-bar {
+    box-shadow: none;
+  }
+  .nav-bar.toggle .menu-bar .line:nth-child(1) {
+    transform: rotate(-45deg);
+    margin: 0;
+  }
+  .nav-bar.toggle .menu-bar .line:nth-child(3) {
+    opacity: 0;
+  }
+  .nav-bar.toggle .menu-bar .line:nth-child(2) {
+    transform: rotateZ(45deg);
+    margin: -2px;
+  }
+}
+// end header
+// start landing
+.landing {
+  padding: 50px 0;
+  background-image: url(/project/glitch-2.gif);
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .text {
+    .first,
+    .second {
+      font-family: "La Belle Aurore", cursive;
+      color: rgb(168, 168, 168);
+      font-size: 1.3em;
+    }
+    h1 {
+      font-size: 3.2em;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 2.5em;
+      }
+      .lt-1 {
+        font-size: 1.2em;
+        color: $main-color;
+        font-weight: 600;
+        filter: drop-shadow(-5px 3px 0 #fff);
+      }
+    }
+    .stretch-it {
+      .char {
+        transition: transform 0.5s cubic-bezier(0.8, 0, 0, 0.9);
+        //transition-delay: calc( 0.03s * var(--char-index) );
+      }
+      &:hover .char {
+        transform: scale(0.8, 0.8);
+      }
+      .char:hover {
+        transform: scale(0.9, 1.5);
+        transition-duration: 0.3s;
+      }
+    }
+    .front {
+      display: inline-block;
+      font-size: 1.2em;
+      font-weight: 500;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 0.7em;
+      }
+      @media (min-width: 422px) and (max-width: 576px) {
+        font-size: 1em;
+      }
+    }
+  }
+  .anime {
+    #ani {
+      width: 100%;
+      height: 60vh;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        height: 40vh;
+      }
+    }
+  }
+  .scroll {
+    @extend .flex;
+    p {
+      font-family: "La Belle Aurore", cursive;
+      color: rgb(168, 168, 168);
+      font-size: 1.7em;
+    }
+  }
+}
+// end landing
+// start quote
+.quote {
+  padding: 60px 0;
+  .msg {
+    @extend .flex;
+    .wrapper {
+      display: flex;
+      position: relative;
+      &::before {
+        content: "QUOTE";
+        position: absolute;
+        top: 0;
+        left: -125%;
+        color: $before-color;
+        font-size: 10em;
+        font-weight: 800;
+        z-index: -1;
+        @media (min-width: $xx-small) and (max-width: $x-small) {
+          font-size: 5em;
+          left: -40px;
+        }
+        @media (min-width: $sm) and (max-width: $md) {
+          font-size: 8em;
+          left: -120px;
+        }
+        @media (min-width: 769px) and (max-width: $lg) {
+          left: -50%;
+          font-size: 8em;
+        }
+      }
+      svg {
+        margin: 0 auto;
+        width: 100%;
+        height: 60vh;
+        @media (min-width: $xx-small) and (max-width: $x-small) {
+          height: 70vh;
+        }
+      }
+      h4 {
+        position: absolute;
+        top: 45%;
+        left: 15%;
+        letter-spacing: 1px;
+        font-size: 1.5em;
+        font-weight: 600;
+        @media (min-width: $xx-small) and (max-width: $x-small) {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+// end quote
+// start projects
+.projects {
+  padding-bottom: 60px;
+  .portfolio {
+    position: relative;
+    .first,
+    .second {
+      font-family: "La Belle Aurore", cursive;
+      color: rgb(168, 168, 168);
+      font-size: 1.3em;
+    }
+    h1 {
+      color: $main-color;
+      font-size: 2.8em;
+      font-weight: 600;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 2em;
+      }
+    }
+    .stretch-it {
+      .char {
+        transition: transform 0.5s cubic-bezier(0.8, 0, 0, 0.9);
+        //transition-delay: calc( 0.03s * var(--char-index) );
+      }
+      &:hover .char {
+        transform: scale(0.8, 0.8);
+      }
+      .char:hover {
+        transform: scale(0.9, 1.5);
+        transition-duration: 0.3s;
+      }
+    }
+    .work {
+      position: absolute;
+      top: -25%;
+      left: 70%;
+      color: $before-color;
+      font-size: 10em;
+      font-weight: 800;
+      z-index: -1;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 5em;
+        top: -15%;
+        left: 6%;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        font-size: 8em;
+        left: 25%;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 8em;
+        left: 45%;
+      }
+      @media (min-width: 993px) and (max-width: $xl) {
+        left: 45%;
+      }
+    }
+    .para {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        flex-direction: column;
+      }
+      p {
+        color: $sec-color;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        font-size: 1.2em;
+        @media (min-width: $xx-small) and (max-width: $x-small) {
+          font-size: 1em;
+        }
+        @media (min-width: 769px) and (max-width: $lg) {
+          font-size: 1em;
+        }
+        a {
+          text-decoration: none;
+          color: $main-color;
+          font-weight: 500;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      button {
+        font-size: 16px;
+        padding: 1em 3.3em;
+        transform: perspective(200px) rotateX(15deg);
+        color: $sec-color;
+        font-weight: 900;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(-45deg, $main-color 0%, #000 100%);
+        will-change: transform;
+        transition: all 0.3s;
+        border-bottom: 2px solid $main-color;
+        &:hover {
+          transform: perspective(180px) rotateX(30deg) translateY(2px);
+        }
+        &:active {
+          transform: perspective(170px) rotateX(36deg) translateY(5px);
+        }
+        a {
+          text-decoration: none;
+          color: $sec-color;
+          font-size: 1.3em;
+          font-weight: 200;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+  .sec {
+    font-family: "La Belle Aurore", cursive;
+    color: rgb(168, 168, 168);
+    font-size: 1.3em;
+    margin-left: 30px;
+  }
+  .gallery {
+    display: flex;
+    margin: 10px 0;
+    @media (min-width: $xx-small) and (max-width: $x-small) {
+      flex-direction: column;
+    }
+    @media (min-width: $sm) and (max-width: $md) {
+      flex-direction: column;
+    }
+    @media (min-width: 769px) and (max-width: $lg) {
+      flex-direction: column;
+    }
+    figure,
+    figcaption {
+      background-color: $main-color;
+    }
+    figure {
+      margin-right: 5px;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        margin-bottom: 5px;
+      }
+      @media (min-width: $sm) and (max-width: $md) {
+        margin-bottom: 10px;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        margin-bottom: 10px;
+      }
+      img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        @media (min-width: $sm) and (max-width: $md) {
+          height: 50vh;
+        }
+        @media (min-width: 769px) and (max-width: $lg) {
+          height: 50vh;
+        }
+      }
+    }
+    figcaption {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $sec-color;
+        font-size: 1.3em;
+        font-weight: 500;
+      }
+    }
+  }
+}
+// end projects
+// start about me
+.about-me {
+  padding-bottom: 60px;
+  .about {
+    position: relative;
+    &::before {
+      content: "ABOUT";
+      position: absolute;
+      top: -30%;
+      left: -25%;
+      color: $before-color;
+      font-size: 10em;
+      font-weight: 800;
+      z-index: -1;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 4em;
+        top: -13%;
+        left: -5%;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        left: -5%;
+      }
+    }
+    .first,
+    .second {
+      font-family: "La Belle Aurore", cursive;
+      color: rgb(168, 168, 168);
+      font-size: 1.3em;
+    }
+    h1 {
+      color: $main-color;
+      font-size: 2.8em;
+      font-weight: 600;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 2em;
+      }
+      #avatar {
+        svg {
+          width: 13% !important;
+          @media (min-width: $xx-small) and (max-width: $x-small) {
+            width: 20% !important;
+          }
+          @media (min-width: 422px) and (max-width: 576px) {
+            width: 15% !important;
+          }
+          @media (min-width: 769px) and (max-width: $lg) {
+            width: 10% !important;
+          }
+        }
+      }
+    }
+    .stretch-it {
+      .char {
+        transition: transform 0.5s cubic-bezier(0.8, 0, 0, 0.9);
+        //transition-delay: calc( 0.03s * var(--char-index) );
+      }
+      &:hover .char {
+        transform: scale(0.8, 0.8);
+      }
+      .char:hover {
+        transform: scale(0.9, 1.5);
+        transition-duration: 0.3s;
+      }
+    }
+    p {
+      color: $sec-color;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 1em;
+      }
+      @media (min-width: 769px) and (max-width: $lg) {
+        font-size: 1em;
+      }
+      #heart {
+        svg {
+          width: 10% !important;
+          @media (min-width: $xx-small) and (max-width: $x-small) {
+            width: 18% !important;
+          }
+          @media (min-width: 422px) and (max-width: 576px) {
+            width: 14% !important;
+          }
+        }
+      }
+    }
+  }
+  .img {
+    @extend .flex;
+    .photo {
+      @extend .flex;
+      background-color: rgba(231, 76, 60, 0.7);
+      border-radius: 5px;
+      width: 50%;
+      transform-style: preserve-3d;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 90%;
+      }
+      img {
+        width: 55%;
+        height: 55vh;
+        object-fit: contain;
+        transform: translateZ(60px);
+        @media (min-width: $xx-small) and (max-width: $x-small) {
+          object-fit: cover;
+          transform: translateZ(20px);
+        }
+        @media (min-width: 422px) and (max-width: 576px) {
+          object-fit: contain;
+          transform: translateZ(20px);
+        }
+      }
+    }
+  }
+}
+// end about me
+// start playing
+.ml4 {
+  font-family: "La Belle Aurore", cursive;
+  color: $sec-color;
+  font-size: 2.5em;
+  @extend .flex;
+  margin-bottom: 30px;
+  @media (min-width: $xx-small) and (max-width: 1340px) {
+    display: none;
+  }
+}
+.ml4 .letters {
+  opacity: 0;
+}
+.playing {
+  padding-bottom: 60px 0;
+  @media (min-width: $xx-small) and (max-width: 1340px) {
+    display: none;
+  }
+}
+// end playing
+// start form
+.form {
+  padding: 60px 0;
+  .form-content {
+    .first,
+    .second {
+      font-family: "La Belle Aurore", cursive;
+      color: rgb(168, 168, 168);
+      font-size: 1.3em;
+    }
+    h1 {
+      color: $main-color;
+      font-size: 2.8em;
+      font-weight: 600;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        font-size: 2em;
+      }
+      #mail {
+        svg {
+          width: 13% !important;
+        }
+      }
+    }
+    .stretch-it {
+      .char {
+        transition: transform 0.5s cubic-bezier(0.8, 0, 0, 0.9);
+        //transition-delay: calc( 0.03s * var(--char-index) );
+      }
+      &:hover .char {
+        transform: scale(0.8, 0.8);
+      }
+      .char:hover {
+        transform: scale(0.9, 1.5);
+        transition-duration: 0.3s;
+      }
+    }
+    form {
+      width: 400px;
+      @media (min-width: $xx-small) and (max-width: $x-small) {
+        width: 100%;
+      }
+      button {
+        font-family: inherit;
+        font-size: 20px;
+        background: $main-color;
+        color: $sec-color;
+        padding: 10px 50px;
+        padding-left: 0.9em;
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.2s;
+      }
+      button span {
+        display: block;
+        margin-left: 0.3em;
+        transition: all 0.3s ease-in-out;
+      }
+      button svg {
+        display: block;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+      }
+      button:hover .svg-wrapper {
+        animation: fly-1 0.6s ease-in-out infinite alternate;
+      }
+      button:hover svg {
+        transform: translateX(1.2em) rotate(45deg) scale(1.1);
+      }
+      button:hover span {
+        transform: translateX(5em);
+      }
+      button:active {
+        transform: scale(0.95);
+      }
+      @keyframes fly-1 {
+        from {
+          transform: translateY(0.1em);
+        }
+        to {
+          transform: translateY(-0.1em);
+        }
+      }
+    }
+    .field-group {
+      margin-bottom: 20px;
+      position: relative;
+      label,
+      input,
+      textarea {
+        display: inline-block;
+        margin: 0;
+      }
+      label {
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        top: 16px;
+        transition: all 150ms ease-in;
+        color: $sec-color;
+      }
+      label.field-active {
+        transform: translateY(-35px);
+        font-size: 1.1em;
+        font-weight: 600;
+        color: $sec-color;
+      }
+      input,
+      textarea {
+        color: $sec-color;
+        background-color: #495d70;
+        caret-color: $main-color;
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ededed;
+        border-radius: 5px;
+        &:focus {
+          outline: 0;
+          border-color: $main-color;
+        }
+      }
+    }
+  }
+  .animated {
+    display: flex;
+  }
+}
+// end form
+// start footer
+.footer {
+  position: relative;
+  width: 100%;
+  background: #7d4440;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer p {
+  color: $sec-color;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+#contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-info .links {
+  display: flex;
+  min-width: 500px;
+  justify-content: space-between;
+  @media (min-width: $xx-small) and (max-width: $x-small) {
+    flex-direction: column;
+    min-width: 0;
+  }
+}
+#contact-info a {
+  text-decoration: none;
+  color: $color-bright;
+  font-size: 2rem;
+  @media (min-width: $xx-small) and (max-width: $x-small) {
+    margin-bottom: 30px;
+  }
+}
+#contact-info .links a {
+  display: block;
+  position: relative;
+}
+#contact-info .links a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+#contact-info .links a:hover::after {
+  --transformed-box-diagonal-length: 164%;
+  width: var(--transformed-box-diagonal-length);
+  left: calc((100% - var(--transformed-box-diagonal-length)) / 2);
+}
+#contact-info .links a div {
+  position: relative;
+  display: block;
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s;
+  z-index: 1000;
+}
+#contact-info .links a:hover div {
+  transform: rotate(-35deg) skew(20deg);
+}
+.links a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  border: 1px solid $color-bright;
+  border-radius: 5px;
+}
+.links a span:nth-child(5) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.links a:hover span:nth-child(5) {
+  transform: translate(20px, -20px);
+  opacity: 1;
+}
+.links a:hover span:nth-child(4) {
+  transform: translate(15px, -15px);
+  opacity: 0.8;
+}
+.links a:hover span:nth-child(3) {
+  transform: translate(10px, -10px);
+  opacity: 0.6;
+}
+.links a:hover span:nth-child(2) {
+  transform: translate(5px, -5px);
+  opacity: 0.4;
+}
+.links a:hover span:nth-child(1) {
+  opacity: 0.2;
+}
+.wave {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("/project/wavy.png");
+  background-size: 1000px 100px;
+}
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+.fa-rocket {
+  position: fixed;
+  bottom: 10px;
+  right: -40px;
+  background-color: $main-color;
+  color: $sec-color;
+  font-size: 1.7em;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+  z-index: 1000;
+  @media (min-width: $xx-small) and (max-width: $x-small) {
+    display: none;
+  }
+}
+.fa-rocket.show {
+  right: 10px;
+}
+// end footer
